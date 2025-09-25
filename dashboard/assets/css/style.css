@@ -1,0 +1,176 @@
+/* Custom CSS for Brand Monitoring Dashboard */
+
+/* Main container */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Headers */
+h1 {
+    color: #1E88E5;
+    font-weight: 700;
+}
+
+h2 {
+    color: #0D47A1;
+    font-weight: 600;
+}
+
+h3 {
+    color: #1565C0;
+    font-weight: 500;
+}
+
+/* Metrics */
+div[data-testid="stMetric"] {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+div[data-testid="stMetric"] label {
+    font-weight: 600;
+    color: #555;
+}
+
+div[data-testid="stMetric"] div[data-testid="stMetricValue"] {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Tabs */
+button[data-baseweb="tab"] {
+    font-weight: 600;
+}
+
+/* Expanders */
+details {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+details summary {
+    padding: 0.75rem;
+    font-weight: 600;
+}
+
+details[open] {
+    padding-bottom: 1rem;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #f8f9fa;
+}
+
+section[data-testid="stSidebar"] h1 {
+    color: #0D47A1;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Charts */
+div[data-testid="stPlotlyChart"] {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Tables */
+div[data-testid="stTable"] {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* Crisis severity colors */
+.severity-critical {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.severity-high {
+    color: #f57c00;
+    font-weight: bold;
+}
+
+.severity-medium {
+    color: #fbc02d;
+    font-weight: bold;
+}
+
+.severity-low {
+    color: #388e3c;
+    font-weight: bold;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-new {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.status-investigating {
+    background-color: #f57c00;
+    color: white;
+}
+
+.status-resolved {
+    background-color: #388e3c;
+    color: white;
+}
+
+/* Sentiment indicators */
+.sentiment-positive {
+    color: #388e3c;
+}
+
+.sentiment-negative {
+    color: #d32f2f;
+}
+
+.sentiment-neutral {
+    color: #757575;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    div[data-testid="stMetric"] div[data-testid="stMetricValue"] {
+        font-size: 1.4rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+}

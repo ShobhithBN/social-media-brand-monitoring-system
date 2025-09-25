@@ -1,0 +1,41 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    depends_on:
+      - db
+    volumes:
+      - .:/app              # Source code live mount
+      - ./data:/app/data    # Data persistence
+      - ./logs:/app/logs    # Log persistence
+    restart: unless-stopped
+    command: ["main.py"]
+
+  dashboard:
+    build: .
+    env_file: .env
+    depends_on:
+      - db
+      - app
+    ports:
+      - "8501:8501"  # Dashboard port
+    volumes:
+      - .:/app              # Source code live mount
+      - ./data:/app/data    # Data persistence
+    restart: unless-stopped
+    command: ["dashboard/app.py"]
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: brand_monitor
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

@@ -1,0 +1,30 @@
+# API Clients
+praw==7.7.0  # Reddit API
+newsapi-python==0.2.7  # News API
+requests==2.28.2
+
+# Data Processing
+pandas==1.5.3
+numpy==1.24.2
+
+# NLP & Sentiment Analysis
+nltk==3.8.1
+textblob==0.17.1
+spacy==3.5.1
+
+# Database
+sqlalchemy==2.0.5
+psycopg2-binary==2.9.5
+alembic==1.10.2  # For database migrations
+
+# Dashboard
+streamlit==1.19.0
+plotly==5.13.1
+matplotlib==3.7.1
+
+# Utilities
+python-dotenv==1.0.0
+schedule==1.1.0  # For scheduling data collection
+
+# Additional Dependencies
+uvicorn==0.37.0
